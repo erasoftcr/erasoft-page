@@ -43,13 +43,13 @@ const features = [
       {
         features.map((feature) => (
           <div class="md:w-1/1 w-full px-4 lg:w-1/3">
-            <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
-              <div class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-                <span class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45" />
+            <div class="wow fadeInUp group mb-12 flex flex-col justify-center items-center" data-wow-delay=".1s">
+              <div class=" relative z-10 mb-10 flex flex-center h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
+                <span class=" mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45" />
                 <img src={feature.icon} alt="icon" />
               </div>
-              <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">{feature.title}</h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">{feature.description}</p>
+              <h4 class="mb-3 text-center text-xl font-bold text-dark dark:text-white">{feature.title}</h4>
+              <p class="mb-8 text-center text-body-color dark:text-dark-6 lg:mb-9">{feature.description}</p>
             </div>
           </div>
         ))
