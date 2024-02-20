@@ -24,7 +24,7 @@ import nodemailer from "nodemailer";
         secure: true,
         auth: {
           user: 'line-code.andrey@gmail.com',
-          pass: 'narutogt'
+          pass: '000000'
         }
       });
 
