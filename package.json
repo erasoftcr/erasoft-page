@@ -12,8 +12,13 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource-variable/inter": "^5.0.8",
+    "@types/canvas-confetti": "^1.6.4",
     "astro": "^3.6.4",
     "astro-compress": "^2.0.15",
+    "canvas-confetti": "^1.9.2",
+    "form-data": "^4.0.0",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^10.2.1",
     "nodemailer": "^6.9.9",
     "swiper": "^11.0.4",
     "tailwindcss": "^3.3.3"

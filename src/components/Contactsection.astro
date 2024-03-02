@@ -1,49 +1,45 @@
 ---
-import {sendEmail} from '../scripts/nodemailer';
+import { sendEmail } from '../scripts/nodemailer';
 
 export const prerender = true;
 
-if (Astro.request.method === "POST") {
-  console.log("Entra metoodo")
+
+
+if (Astro.request.method === 'POST') {
+  console.log('Entra metoodo');
   try {
-     // Getting posted data from our contact form
-   
+    // Getting posted data from our contact form
 
     const data = await Astro.request.formData();
-    const name = data.get("fullName");
-    const email = data.get("email");
-    const phone = data.get("phone");
-    const message = data.get("message");
+    const name = data.get('fullName');
+    const email = data.get('email');
+    const phone = data.get('phone');
+    const message = data.get('message');
 
-
-       const payload = {
+    const payload = {
       name: name,
       email: email,
       message: message,
-      phone:phone,
-
-      };
+      phone: phone,
+    };
 
     await sendEmail({
-        email: "daadevcr@gmail.com",
-        html: `<p>${JSON.stringify(payload)}</p>`,
-        subject: "Nuevo cliente pagina ERASOFT",
-        text: "NUEVO ERASOFT MENSAJE",
-      }).then(() => {
-      console.log('Email sent')
-    }).catch((error) => {
-      console.error(error)
-    });
+      email: email,
+      html: payload,
+      subject: 'Nuevo correo desde erasoftcr.com',
+      text: message,
+    })
+      .then(() => {
+      })
+      .catch((error) => {
+    
+   
 
-
-
-}catch(e){
-  console.error(e)
+      });
+  } catch (e) {
+    console.error(e);
+  }
 }
-
-
-}
-
 ---
 
 <!-- ====== Contact Start ====== -->
@@ -169,6 +165,10 @@ if (Astro.request.method === "POST") {
               </button>
             </div>
           </form>
+        </div>
+      
+       
+          <span class="font-medium">Email sended!</span> Thanks, soon our contact you.
         </div>
       </div>
     </div>
